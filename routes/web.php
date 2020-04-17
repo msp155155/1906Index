@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::prefix('index')->group(function () {
+    Route::get('/index', 'Index\IndexController@index');
+    Route::get('/info', 'Index\IndexController@info');
+});
